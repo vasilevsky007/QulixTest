@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ImageData: Codable {
+struct ImageData: Codable, Equatable {
     
-    struct Images: Codable {
+    struct Images: Codable, Equatable {
         let fixedHeight: URL
         let original: URL
         

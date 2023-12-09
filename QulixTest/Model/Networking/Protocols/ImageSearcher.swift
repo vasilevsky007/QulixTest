@@ -8,9 +8,8 @@
 import Foundation
 
 protocol ImageSearcher {
-    var step: String {get set}
-    var query: String {get set}
-    var offset: String {get set}
-    func search(for query: String)
-    func getNext()
+    func search(for query: String) async throws -> [ImageData]
+    func getNext() async throws -> [ImageData]
+    var isEnded: Bool? {get}
+    init(step: Int)
 }
