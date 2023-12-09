@@ -17,6 +17,24 @@
 		FAB75D282B23202E008F21F3 /* QulixTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D272B23202E008F21F3 /* QulixTestTests.swift */; };
 		FAB75D322B23202E008F21F3 /* QulixTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D312B23202E008F21F3 /* QulixTestUITests.swift */; };
 		FAB75D342B23202E008F21F3 /* QulixTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D332B23202E008F21F3 /* QulixTestUITestsLaunchTests.swift */; };
+		FAB75D492B232B99008F21F3 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D482B232B99008F21F3 /* ImageSearcher.swift */; };
+		FAB75D4A2B232B99008F21F3 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D482B232B99008F21F3 /* ImageSearcher.swift */; };
+		FAB75D4B2B232B99008F21F3 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D482B232B99008F21F3 /* ImageSearcher.swift */; };
+		FAB75D582B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D572B23373C008F21F3 /* GiphyImageSearcher.swift */; };
+		FAB75D592B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D572B23373C008F21F3 /* GiphyImageSearcher.swift */; };
+		FAB75D5A2B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D572B23373C008F21F3 /* GiphyImageSearcher.swift */; };
+		FAB75D5D2B2339DA008F21F3 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D5C2B2339DA008F21F3 /* ImageData.swift */; };
+		FAB75D5E2B2339DA008F21F3 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D5C2B2339DA008F21F3 /* ImageData.swift */; };
+		FAB75D5F2B2339DA008F21F3 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D5C2B2339DA008F21F3 /* ImageData.swift */; };
+		FAB75D612B233B4E008F21F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D602B233B4E008F21F3 /* User.swift */; };
+		FAB75D622B233B4E008F21F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D602B233B4E008F21F3 /* User.swift */; };
+		FAB75D632B233B4E008F21F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D602B233B4E008F21F3 /* User.swift */; };
+		FAB75D652B234996008F21F3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D642B234996008F21F3 /* Errors.swift */; };
+		FAB75D662B234996008F21F3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D642B234996008F21F3 /* Errors.swift */; };
+		FAB75D672B234996008F21F3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D642B234996008F21F3 /* Errors.swift */; };
+		FAB75D6E2B247712008F21F3 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D6D2B247712008F21F3 /* ImageFetcher.swift */; };
+		FAB75D6F2B247712008F21F3 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D6D2B247712008F21F3 /* ImageFetcher.swift */; };
+		FAB75D702B247712008F21F3 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D6D2B247712008F21F3 /* ImageFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +69,13 @@
 		FAB75D2D2B23202E008F21F3 /* QulixTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QulixTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB75D312B23202E008F21F3 /* QulixTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QulixTestUITests.swift; sourceTree = "<group>"; };
 		FAB75D332B23202E008F21F3 /* QulixTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QulixTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAB75D482B232B99008F21F3 /* ImageSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
+		FAB75D572B23373C008F21F3 /* GiphyImageSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyImageSearcher.swift; sourceTree = "<group>"; };
+		FAB75D5C2B2339DA008F21F3 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		FAB75D602B233B4E008F21F3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAB75D642B234996008F21F3 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		FAB75D682B237327008F21F3 /* QulixTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = QulixTest.xctestplan; sourceTree = "<group>"; };
+		FAB75D6D2B247712008F21F3 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +106,7 @@
 		FAB75D012B23201F008F21F3 = {
 			isa = PBXGroup;
 			children = (
+				FAB75D682B237327008F21F3 /* QulixTest.xctestplan */,
 				FAB75D0C2B23201F008F21F3 /* QulixTest */,
 				FAB75D262B23202E008F21F3 /* QulixTestTests */,
 				FAB75D302B23202E008F21F3 /* QulixTestUITests */,
@@ -101,14 +127,15 @@
 		FAB75D0C2B23201F008F21F3 /* QulixTest */ = {
 			isa = PBXGroup;
 			children = (
+				FAB75D402B23209F008F21F3 /* Model */,
+				FAB75D412B2320B0008F21F3 /* Conlroller */,
+				FAB75D422B2320C4008F21F3 /* View */,
 				FAB75D0D2B23201F008F21F3 /* AppDelegate.swift */,
 				FAB75D0F2B23201F008F21F3 /* SceneDelegate.swift */,
-				FAB75D112B23201F008F21F3 /* ViewController.swift */,
-				FAB75D132B23201F008F21F3 /* Main.storyboard */,
 				FAB75D192B23202E008F21F3 /* Assets.xcassets */,
-				FAB75D1B2B23202E008F21F3 /* LaunchScreen.storyboard */,
 				FAB75D1E2B23202E008F21F3 /* Info.plist */,
 				FAB75D162B23201F008F21F3 /* QulixTest.xcdatamodeld */,
+				FAB75D642B234996008F21F3 /* Errors.swift */,
 			);
 			path = QulixTest;
 			sourceTree = "<group>";
@@ -130,6 +157,67 @@
 			path = QulixTestUITests;
 			sourceTree = "<group>";
 		};
+		FAB75D402B23209F008F21F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D5B2B2338AE008F21F3 /* Entities */,
+				FAB75D512B232E12008F21F3 /* Networking */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAB75D412B2320B0008F21F3 /* Conlroller */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D112B23201F008F21F3 /* ViewController.swift */,
+			);
+			path = Conlroller;
+			sourceTree = "<group>";
+		};
+		FAB75D422B2320C4008F21F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D132B23201F008F21F3 /* Main.storyboard */,
+				FAB75D1B2B23202E008F21F3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB75D4C2B232D76008F21F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D482B232B99008F21F3 /* ImageSearcher.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAB75D512B232E12008F21F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D522B232E3C008F21F3 /* Implementations */,
+				FAB75D4C2B232D76008F21F3 /* Protocols */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAB75D522B232E3C008F21F3 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D572B23373C008F21F3 /* GiphyImageSearcher.swift */,
+				FAB75D6D2B247712008F21F3 /* ImageFetcher.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		FAB75D5B2B2338AE008F21F3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D5C2B2339DA008F21F3 /* ImageData.swift */,
+				FAB75D602B233B4E008F21F3 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +234,8 @@
 			dependencies = (
 			);
 			name = QulixTest;
+			packageProductDependencies = (
+			);
 			productName = QulixTest;
 			productReference = FAB75D0A2B23201F008F21F3 /* QulixTest.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +308,8 @@
 				Base,
 			);
 			mainGroup = FAB75D012B23201F008F21F3;
+			packageReferences = (
+			);
 			productRefGroup = FAB75D0B2B23201F008F21F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,8 +355,14 @@
 			files = (
 				FAB75D122B23201F008F21F3 /* ViewController.swift in Sources */,
 				FAB75D182B23201F008F21F3 /* QulixTest.xcdatamodeld in Sources */,
+				FAB75D582B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */,
 				FAB75D0E2B23201F008F21F3 /* AppDelegate.swift in Sources */,
+				FAB75D612B233B4E008F21F3 /* User.swift in Sources */,
 				FAB75D102B23201F008F21F3 /* SceneDelegate.swift in Sources */,
+				FAB75D492B232B99008F21F3 /* ImageSearcher.swift in Sources */,
+				FAB75D652B234996008F21F3 /* Errors.swift in Sources */,
+				FAB75D5D2B2339DA008F21F3 /* ImageData.swift in Sources */,
+				FAB75D6E2B247712008F21F3 /* ImageFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB75D4A2B232B99008F21F3 /* ImageSearcher.swift in Sources */,
 				FAB75D282B23202E008F21F3 /* QulixTestTests.swift in Sources */,
+				FAB75D592B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */,
+				FAB75D622B233B4E008F21F3 /* User.swift in Sources */,
+				FAB75D6F2B247712008F21F3 /* ImageFetcher.swift in Sources */,
+				FAB75D662B234996008F21F3 /* Errors.swift in Sources */,
+				FAB75D5E2B2339DA008F21F3 /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB75D5A2B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */,
+				FAB75D702B247712008F21F3 /* ImageFetcher.swift in Sources */,
 				FAB75D342B23202E008F21F3 /* QulixTestUITestsLaunchTests.swift in Sources */,
+				FAB75D632B233B4E008F21F3 /* User.swift in Sources */,
+				FAB75D4B2B232B99008F21F3 /* ImageSearcher.swift in Sources */,
+				FAB75D5F2B2339DA008F21F3 /* ImageData.swift in Sources */,
 				FAB75D322B23202E008F21F3 /* QulixTestUITests.swift in Sources */,
+				FAB75D672B234996008F21F3 /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +564,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +572,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.alex.vasilevski007.QulixTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,6 +596,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +604,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.alex.vasilevski007.QulixTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
