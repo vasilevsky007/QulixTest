@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GiphyImageSearcher {
+class GiphyImageSearcher: ImageSearcher {
     
     private let session: URLSession
     private let step: Int

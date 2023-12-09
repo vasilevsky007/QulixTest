@@ -10,7 +10,7 @@ import XCTest
 
 final class QulixTestTests: XCTestCase {
     
-    var giphySearcher: GiphyImageSearcher!
+    var giphySearcher: ImageSearcher!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
