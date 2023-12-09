@@ -11,4 +11,5 @@ enum QulixTestError: Error {
     case badUrlComponents
     case noTotalCountOnInitialRequest
     case noIsEndedFlagOnPagination
+    case noImageFetcherToFetchImage
 }

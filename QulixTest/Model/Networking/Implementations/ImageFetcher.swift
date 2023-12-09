@@ -26,22 +26,17 @@ actor ImageFetcher {
         self.context = nil
     }
     
-    func imageData(forUrl imageURL: URL) async -> Data? {
+    func imageData(forUrl imageURL: URL) async throws -> Data {
         if let cachedData = imageCache[imageURL] {
             print("using cached image")
             return cachedData
         }
-        do {
-            let (data, _) = try await session.data(for: request(url: imageURL))
-            imageCache.updateValue(data, forKey: imageURL)
-            Task.detached {
-                await self.saveImageToCoreData(data: data, url: imageURL)
-            }
-            return data
-        } catch {
-            print("Error loading image from url \(imageURL) :\n\(error)")
-            return nil
+        let (data, _) = try await session.data(for: request(url: imageURL))
+        imageCache.updateValue(data, forKey: imageURL)
+        Task.detached {
+            await self.saveImageToCoreData(data: data, url: imageURL)
         }
+        return data
     }
     
     private func saveImageToCoreData(data: Data, url: URL) {

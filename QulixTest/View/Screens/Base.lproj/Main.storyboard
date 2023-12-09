@@ -47,7 +47,7 @@
                                     <constraint firstItem="q25-Lk-2A8" firstAttribute="leading" secondItem="7SL-cC-xzi" secondAttribute="trailing" constant="8" id="b63-2m-aY0"/>
                                 </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pvn-wG-8dE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pvn-wG-8dE">
                                 <rect key="frame" x="16" y="115" width="288" height="437"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lcX-Ne-4sn">
