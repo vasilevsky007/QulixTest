@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "B3CD3347-A225-4FBD-9434-76D9203454B5",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:QulixTest.xcodeproj",
+      "identifier" : "FAB75D092B23201F008F21F3",
+      "name" : "QulixTest"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:QulixTest.xcodeproj",
+        "identifier" : "FAB75D222B23202E008F21F3",
+        "name" : "QulixTestTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:QulixTest.xcodeproj",
+        "identifier" : "FAB75D2C2B23202E008F21F3",
+        "name" : "QulixTestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
