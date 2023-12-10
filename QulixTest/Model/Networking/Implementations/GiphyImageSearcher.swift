@@ -15,7 +15,7 @@ class GiphyImageSearcher: ImageSearcher {
     private var currentOffset: Int
     private var totalCount: Int!
     
-    private struct GiphyResponse: Codable {
+    private struct GiphyResponse: Decodable {
         
         struct Pagination: Codable {
             let countReturned: Int

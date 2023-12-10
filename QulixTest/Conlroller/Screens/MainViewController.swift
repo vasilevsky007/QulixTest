@@ -36,6 +36,33 @@ class MainViewController: UIViewController {
         }
     }
     
+    private weak var sheetPresented: ImageDetailsViewController?
+    
+    func openSheet(withImageIndex imageIndex: Int) {
+        let viewControllerToPresent = ImageDetailsViewController()
+        if #available(iOS 15.0, *) { //this is working 100% sure
+            if let sheet = viewControllerToPresent.sheetPresentationController {
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                sheet.prefersEdgeAttachedInCompactHeight = false
+                sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                sheet.prefersGrabberVisible = true
+            }
+           
+        } else {
+            // Fallback on earlier versions
+            viewControllerToPresent.modalPresentationStyle = .pageSheet //don't know if this will work as intended, lowest ios simulator version is 15 now in xcode.
+        }
+        if sheetPresented != nil {
+            sheetPresented?.setup(image: imageStore.items[imageIndex], fetcher: imageFetcher)
+        } else {
+            present(viewControllerToPresent, animated: true, completion: nil)
+            sheetPresented = viewControllerToPresent
+            sheetPresented?.setup(image: imageStore.items[imageIndex], fetcher: imageFetcher)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,9 +96,9 @@ extension MainViewController: UICollectionViewDataSource ,UICollectionViewDelega
         return 8
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        openSheet(withProductIndex: indexPath.item)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        openSheet(withImageIndex: indexPath.item)
+    }
     
 }
 

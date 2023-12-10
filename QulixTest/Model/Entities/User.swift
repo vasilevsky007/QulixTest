@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable, Equatable {
+struct User: Decodable, Equatable {
     let avatar: URL
     let profileURL: URL
     let username: String
