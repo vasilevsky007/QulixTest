@@ -40,6 +40,7 @@
 		FAB75D7F2B248A33008F21F3 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D7D2B248A33008F21F3 /* ImageCell.swift */; };
 		FAB75D802B248A33008F21F3 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB75D7E2B248A33008F21F3 /* ImageCell.xib */; };
 		FAB75D832B249E29008F21F3 /* ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D822B249E29008F21F3 /* ImageDataStore.swift */; };
+		FAB75D862B25CB45008F21F3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D852B25CB45008F21F3 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		FAB75D7D2B248A33008F21F3 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		FAB75D7E2B248A33008F21F3 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		FAB75D822B249E29008F21F3 /* ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataStore.swift; sourceTree = "<group>"; };
+		FAB75D852B25CB45008F21F3 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		FAB75D0C2B23201F008F21F3 /* QulixTest */ = {
 			isa = PBXGroup;
 			children = (
+				FAB75D842B25CB1C008F21F3 /* Utils */,
 				FAB75D402B23209F008F21F3 /* Model */,
 				FAB75D412B2320B0008F21F3 /* Conlroller */,
 				FAB75D422B2320C4008F21F3 /* View */,
@@ -267,6 +270,14 @@
 				FAB75D822B249E29008F21F3 /* ImageDataStore.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		FAB75D842B25CB1C008F21F3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAB75D852B25CB45008F21F3 /* ViewExtension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +428,7 @@
 				FAB75D652B234996008F21F3 /* Errors.swift in Sources */,
 				FAB75D5D2B2339DA008F21F3 /* ImageData.swift in Sources */,
 				FAB75D6E2B247712008F21F3 /* ImageFetcher.swift in Sources */,
+				FAB75D862B25CB45008F21F3 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
