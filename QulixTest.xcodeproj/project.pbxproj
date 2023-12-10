@@ -41,6 +41,10 @@
 		FAB75D802B248A33008F21F3 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB75D7E2B248A33008F21F3 /* ImageCell.xib */; };
 		FAB75D832B249E29008F21F3 /* ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D822B249E29008F21F3 /* ImageDataStore.swift */; };
 		FAB75D862B25CB45008F21F3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D852B25CB45008F21F3 /* ViewExtension.swift */; };
+		FAB75D8D2B25D404008F21F3 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D8B2B25D404008F21F3 /* ImageDetailsViewController.swift */; };
+		FAB75D8E2B25D404008F21F3 /* ImageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB75D8C2B25D404008F21F3 /* ImageDetailsViewController.xib */; };
+		FAB75D902B260E56008F21F3 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D8F2B260E56008F21F3 /* ImageExtension.swift */; };
+		FAB75D922B262A26008F21F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB75D912B262A26008F21F3 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		FAB75D7E2B248A33008F21F3 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		FAB75D822B249E29008F21F3 /* ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataStore.swift; sourceTree = "<group>"; };
 		FAB75D852B25CB45008F21F3 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		FAB75D8B2B25D404008F21F3 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		FAB75D8C2B25D404008F21F3 /* ImageDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailsViewController.xib; sourceTree = "<group>"; };
+		FAB75D8F2B260E56008F21F3 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		FAB75D912B262A26008F21F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +145,10 @@
 		FAB75D0C2B23201F008F21F3 /* QulixTest */ = {
 			isa = PBXGroup;
 			children = (
-				FAB75D842B25CB1C008F21F3 /* Utils */,
 				FAB75D402B23209F008F21F3 /* Model */,
 				FAB75D412B2320B0008F21F3 /* Conlroller */,
 				FAB75D422B2320C4008F21F3 /* View */,
+				FAB75D842B25CB1C008F21F3 /* Utils */,
 				FAB75D0D2B23201F008F21F3 /* AppDelegate.swift */,
 				FAB75D0F2B23201F008F21F3 /* SceneDelegate.swift */,
 				FAB75D192B23202E008F21F3 /* Assets.xcassets */,
@@ -236,6 +244,7 @@
 			children = (
 				FAB75D132B23201F008F21F3 /* Main.storyboard */,
 				FAB75D1B2B23202E008F21F3 /* LaunchScreen.storyboard */,
+				FAB75D8C2B25D404008F21F3 /* ImageDetailsViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -252,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				FAB75D112B23201F008F21F3 /* MainViewController.swift */,
+				FAB75D8B2B25D404008F21F3 /* ImageDetailsViewController.swift */,
+				FAB75D912B262A26008F21F3 /* SettingsViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -276,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB75D852B25CB45008F21F3 /* ViewExtension.swift */,
+				FAB75D8F2B260E56008F21F3 /* ImageExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -392,6 +404,7 @@
 				FAB75D802B248A33008F21F3 /* ImageCell.xib in Resources */,
 				FAB75D1A2B23202E008F21F3 /* Assets.xcassets in Resources */,
 				FAB75D152B23201F008F21F3 /* Main.storyboard in Resources */,
+				FAB75D8E2B25D404008F21F3 /* ImageDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,16 +431,19 @@
 			files = (
 				FAB75D122B23201F008F21F3 /* MainViewController.swift in Sources */,
 				FAB75D182B23201F008F21F3 /* QulixTest.xcdatamodeld in Sources */,
+				FAB75D8D2B25D404008F21F3 /* ImageDetailsViewController.swift in Sources */,
 				FAB75D7F2B248A33008F21F3 /* ImageCell.swift in Sources */,
 				FAB75D582B23373C008F21F3 /* GiphyImageSearcher.swift in Sources */,
 				FAB75D0E2B23201F008F21F3 /* AppDelegate.swift in Sources */,
 				FAB75D832B249E29008F21F3 /* ImageDataStore.swift in Sources */,
+				FAB75D922B262A26008F21F3 /* SettingsViewController.swift in Sources */,
 				FAB75D612B233B4E008F21F3 /* User.swift in Sources */,
 				FAB75D102B23201F008F21F3 /* SceneDelegate.swift in Sources */,
 				FAB75D492B232B99008F21F3 /* ImageSearcher.swift in Sources */,
 				FAB75D652B234996008F21F3 /* Errors.swift in Sources */,
 				FAB75D5D2B2339DA008F21F3 /* ImageData.swift in Sources */,
 				FAB75D6E2B247712008F21F3 /* ImageFetcher.swift in Sources */,
+				FAB75D902B260E56008F21F3 /* ImageExtension.swift in Sources */,
 				FAB75D862B25CB45008F21F3 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

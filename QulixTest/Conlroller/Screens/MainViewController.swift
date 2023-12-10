@@ -8,6 +8,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    private var loadingIndicator = UIActivityIndicatorView(style: .large
+    )
     
     private let imageFetcher: ImageFetcher? = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
@@ -26,6 +28,7 @@ class MainViewController: UIViewController {
     
     @IBAction func searchTapped(_ sender: UIButton) {
         if let searchQ = searchField.text, searchQ != "" {
+            view.endEditing(true)
             imageStore.removeAll()
             imageGrid.reloadData()
             Task.detached { [weak self] in
@@ -35,6 +38,7 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
     
     private weak var sheetPresented: ImageDetailsViewController?
     
@@ -49,7 +53,7 @@ class MainViewController: UIViewController {
                 sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
                 sheet.prefersGrabberVisible = true
             }
-           
+            
         } else {
             // Fallback on earlier versions
             viewControllerToPresent.modalPresentationStyle = .pageSheet //don't know if this will work as intended, lowest ios simulator version is 15 now in xcode.
@@ -70,6 +74,40 @@ class MainViewController: UIViewController {
         self.imageGrid.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
         self.imageGrid.dataSource = self
         self.imageGrid.delegate = self
+        loadingIndicator.hidesWhenStopped = true
+        imageGrid.addSubview(loadingIndicator)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "OpenSettingsSegue" {
+            if let settingsController = segue.destination as? SettingsViewController {
+                settingsController.imageFetcher = self.imageFetcher
+            }
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            guard !loadingIndicator.isAnimating else { return }
+            loadingIndicator.startAnimating()
+            Task.detached { [weak self] in
+                do {
+                    let newImages = try await self!.imageSearcher.getNext()
+                    self?.imageStore.add(newImages)
+                    await self?.imageGrid.reloadData()
+                    await self?.imageGrid.reloadData()
+                    await self?.loadingIndicator.stopAnimating()
+                } catch {
+                    print("Error refreshing data: \(error)")
+                    await self?.loadingIndicator.stopAnimating()
+                }
+            }
+        }
     }
 }
 
@@ -99,7 +137,6 @@ extension MainViewController: UICollectionViewDataSource ,UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         openSheet(withImageIndex: indexPath.item)
     }
-    
 }
 
 

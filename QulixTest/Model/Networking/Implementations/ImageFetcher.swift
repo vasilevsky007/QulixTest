@@ -14,6 +14,17 @@ actor ImageFetcher {
     private var context: NSManagedObjectContext!
     private let session: URLSession
     
+    var cacheSize: Int {
+        var totalSize = 0
+
+        for (key, value) in imageCache {
+            totalSize += MemoryLayout.size(ofValue: key)
+            totalSize += value.count
+        }
+
+        return totalSize
+    }
+    
     func setContext(context: NSManagedObjectContext) {
         self.context = context
         self.loadCacheFromCoreData()
@@ -37,6 +48,11 @@ actor ImageFetcher {
             await self.saveImageToCoreData(data: data, url: imageURL)
         }
         return data
+    }
+    
+    func clearCache() {
+        imageCache = [:]
+        try? clearCoreData()
     }
     
     private func saveImageToCoreData(data: Data, url: URL) {

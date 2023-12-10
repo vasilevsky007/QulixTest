@@ -26,7 +26,11 @@ class ImageCell: UICollectionViewCell {
                 spinner.startAnimating()
             case .loaded(let imageData):
                 spinner.stopAnimating()
-                imageView.image = UIImage(data: imageData)
+                if let animated = UIImage.animatedImage(withGIFData: imageData) {
+                    imageView.image = animated
+                } else {
+                    imageView.image = UIImage(data: imageData)
+                }
                 imageView.isHidden = false
             case .failed(let error):
                 spinner.stopAnimating()

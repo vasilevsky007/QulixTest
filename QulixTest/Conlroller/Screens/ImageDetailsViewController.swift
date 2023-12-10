@@ -9,6 +9,7 @@ import UIKit
 
 class ImageDetailsViewController: UIViewController {
     
+    @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
@@ -25,8 +26,22 @@ class ImageDetailsViewController: UIViewController {
     }
     
     @IBAction func tapShare(_ sender: UIButton) {
-        
+        switch imageStatus {
+        case .loaded(_):
+            var items: [Any] = [
+                imageLink!
+            ]
+            if let image = imageView.image {
+                items.append(image)
+            }
+            let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            present(activityController, animated: true)
+        default:
+            break
+        }
     }
+    
+    private var imageLink: URL?
     
     enum ImageStatus {
         case loading
@@ -38,15 +53,23 @@ class ImageDetailsViewController: UIViewController {
         didSet {
             switch imageStatus {
             case .loading:
+                errorMessage.isHidden = true
                 imageView.isHidden = true
                 spinner.startAnimating()
             case .loaded(let imageData):
+                errorMessage.isHidden = true
                 spinner.stopAnimating()
-                imageView.image = UIImage(data: imageData)
+                if let animated = UIImage.animatedImage(withGIFData: imageData) {
+                    imageView.image = animated
+                } else {
+                    imageView.image = UIImage(data: imageData)
+                }
                 imageView.isHidden = false
             case .failed(let error):
                 spinner.stopAnimating()
                 imageView.image = UIImage(systemName: "exclamationmark.triangle")?.withTintColor(.red)
+                errorMessage.text = error.localizedDescription
+                errorMessage.isHidden = false
             default: break
             }
         }
@@ -59,7 +82,7 @@ class ImageDetailsViewController: UIViewController {
                 userImage.image = UIImage(systemName: "person.crop.circle")
             case .loaded(let imageData):
                 userImage.image = UIImage(data: imageData)
-            case .failed(let error):
+            case .failed(_):
                 userImage.image = UIImage(systemName: "person.crop.circle")?.withTintColor(.red)
             default: break
             }
@@ -82,11 +105,14 @@ class ImageDetailsViewController: UIViewController {
     
     func setup(image: ImageData, fetcher: ImageFetcher?) {
         spinner.hidesWhenStopped = true
+        errorMessage.isHidden = true
         //making avatar round
         userImage.layer.masksToBounds = false
         userImage.layer.borderColor = UIColor.black.cgColor
         userImage.layer.cornerRadius = userImage.frame.height/2
         userImage.clipsToBounds = true
+        
+        imageLink = image.url
         
         guard let fetcher = fetcher else {
             imageStatus = .failed(error: QulixTestError.noImageFetcherToFetchImage)
